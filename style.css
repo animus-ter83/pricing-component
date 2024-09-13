@@ -1,0 +1,190 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: hsl(240, 78%, 98%);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+	margin: 0 auto;
+	/* max-width: 960px; */
+	padding: 0 24px;
+}
+
+.cards {
+	margin: 0 auto;
+}
+
+.chose-type h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #6e728e;
+	margin-bottom: 40px;
+}
+
+.chose-type {
+	text-align: center;
+	margin: 64px 0 80px 0;
+}
+
+.toggle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+}
+
+#toggle {
+	display: none;
+	margin: 0 auto;
+}
+.toggle span {
+	color: rgba(110, 114, 142, 0.5);
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1.86;
+}
+
+label {
+	display: inline-block;
+	width: 56px;
+	height: 32px;
+	background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	border-radius: 16px;
+	position: relative;
+	cursor: pointer;
+}
+
+label::before {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 5px;
+	width: 24px;
+	height: 24px;
+	background-color: white;
+	border-radius: 50%;
+	transition: transform 0.3s;
+}
+
+#toggle:checked + label {
+	background-color: #2196f3;
+}
+
+#toggle:checked + label::before {
+	transform: translateX(23px);
+}
+
+.card {
+	background-color: #fff;
+	text-align: center;
+	border-radius: 10px;
+	padding: 31px 29px;
+}
+
+.card-btn {
+	width: 100%;
+	background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	border: none;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 14px;
+	border-radius: 6px;
+	margin-top: 32px;
+}
+
+.card-blue .card-btn {
+	background: #fff;
+	color: #6d72de;
+}
+
+.card-benefits {
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1.86;
+	color: #6e728e;
+}
+
+.card-blue .card-benefits {
+	color: #fff;
+}
+
+.card-benefits p,
+.card-benefits p:last-child {
+	padding: 12px 0;
+	border-top: 1px solid rgba(110, 114, 142, 0.25);
+}
+
+.card-benefits p:last-child {
+	border-bottom: 1px solid rgba(110, 114, 142, 0.25);
+}
+
+.card-blue .card-benefits p,
+.card-blue .card-benefits p:last-child {
+	border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.card-blue .card-benefits p:last-child {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.card-blue {
+	background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	color: #fff;
+	margin: 32.5px 0;
+}
+
+.card-heading {
+	font-size: 1.125rem;
+	font-weight: bold;
+	color: #6e728e;
+	margin-bottom: 24px;
+}
+.card-blue .card-heading {
+	color: #fff;
+}
+
+.card-price-monthly {
+	display: none;
+}
+
+.card-blue .card-price-annually,
+.card-blue .card-price-monthly {
+	color: #fff;
+}
+.card-price-annually,
+.card-price-monthly {
+	font-size: 4.5rem;
+	font-weight: bold;
+	color: #4a4d60;
+	margin-bottom: 32px;
+}
+
+.dol {
+	font-size: 40px;
+	vertical-align: 25%;
+}
+
+@media (min-width:1200px) {
+	.cards {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.card {
+		padding: 31px;
+		width: 350px;
+	}
+	.card-blue {
+		margin: 0;
+		padding: 55px 31px;
+	}
+}
