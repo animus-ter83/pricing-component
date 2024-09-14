@@ -1,18 +1,16 @@
-const checkBox = document.querySelector('#toggle')
-const montchprice = document.querySelectorAll('.card-price-monthly')
-const yearprice = document.querySelectorAll('.card-price-annually')
+const checkBox = document.querySelector('#toggle');
+const monthlyPrices = document.querySelectorAll('.card-price-monthly');
+const yearlyPrices = document.querySelectorAll('.card-price-annually');
+
+function togglePrices(showMonthly) {
+  for (let i = 0; i < monthlyPrices.length; i++) {
+    monthlyPrices[i].style.display = showMonthly ? 'block' : 'none';
+    yearlyPrices[i].style.display = showMonthly ? 'none' : 'block';
+  }
+}
+
+togglePrices(checkBox.checked);
 
 checkBox.addEventListener('change', () => {
-	console.log(checkBox.checked)
-	if (checkBox.checked) {
-		for (let i = 0; i < montchprice.length; i++) {
-			montchprice[i].style.display = 'block'
-			yearprice[i].style.display = 'none'
-		}
-	} else {
-		for (let i = 0; i < montchprice.length; i++) {
-			montchprice[i].style.display = 'none'
-			yearprice[i].style.display = 'block'
-		}
-	}
-})
+  togglePrices(checkBox.checked);
+});
