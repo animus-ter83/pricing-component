@@ -226,4 +226,9 @@ label::before {
 		right: 0px;
 		top: 0px;
 	}
+
+	.chose-type {
+		text-align: center;
+		margin: 71px 0 64px 0;
+	}
 }
